@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fridge Browser</title>
+
+<style>
+body {
+    background: #008080;
+    font-family: "Courier New", monospace;
+    margin: 0;
+}
+
+/* Window */
+.window {
+    width: 520px;
+    margin: 60px auto;
+    border: 2px solid black;
+    background: silver;
+    box-shadow: 4px 4px black;
+}
+
+/* Title bar */
+.titlebar {
+    background: navy;
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+}
+
+/* Windows notice */
+.notice {
+    background: #ffcc00;
+    color: black;
+    padding: 6px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
+/* Content */
+.content {
+    padding: 20px;
+    color: black;
+}
+
+/* Terminal */
+.terminal {
+    background: black;
+    color: lime;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* Button */
+button {
+    background: silver;
+    border: 2px solid black;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: gray;
+}
+
+/* Sections */
+.section {
+    margin-top: 15px;
+}
+
+/* Images */
+img {
+    border: 2px solid black;
+    margin: 5px;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: blue;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="window">
+
+    <div class="titlebar">
+        Fridge Browser Setup
+    </div>
+
+    <!-- WINDOWS ONLY NOTICE -->
+    <div class="notice">
+        ⚠ This software is ONLY available for Windows
+    </div>
+
+    <div class="content">
+
+        <!-- TERMINAL -->
+        <div class="terminal">
+            > booting system...<br>
+            > loading fridge-browser.exe<br>
+            > status: OK<br>
+        </div>
+
+        <h2>Fridge Browser</h2>
+        <p>Fast • Lightweight • Custom</p>
+
+        <!-- DOWNLOAD -->
+        <a href="files/fridge-browser-v1.0.zip" download>
+          <button id="downloadBtn" onclick="downloaded()">Download</button>
+        </a>
+
+        <p id="downloadStatus"></p>
+
+        <!-- VERSION -->
+        <p id="version"></p>
+
+        <!-- FEATURES -->
+        <div class="section">
+            <b>Features:</b>
+            <ul>
+                <li>Custom homepage</li>
+                <li>Multiple tabs</li>
+                <li>Lite Mode</li>
+                <li>Built-in search</li>
+            </ul>
+        </div>
+
+        <!-- SCREENSHOTS -->
+        <div class="section">
+            <b>Screenshots:</b><br><br>
+            <img src="images/shot1.png" width="220">
+            <img src="images/shot2.png" width="220">
+        </div>
+
+        <!-- CHANGELOG -->
+        <div class="section">
+            <b>Changelog:</b>
+            <ul>
+                <li>v1.0 - Initial release</li>
+                <li>✔ Homepage added</li>
+                <li>✔ Search bar working</li>
+                <li>✔ Fullscreen fixed</li>
+            </ul>
+        </div>
+
+        <!-- CREDITS -->
+        <div class="section">
+            <b>Credits:</b>
+            <div class="terminal">
+                > Creator: Satria Evander Dharma<br>
+                > Helper: ChatGPT!<br>
+                > Browser Testers: Jerald J.M, Bradley C.H<br>
+                > Emotional Support : Jerald J.M<br>
+            </div>
+        </div>
+
+        <!-- SUPPORT -->
+        <div class="section">
+            <b>Support:</b>
+            <p>
+                Email:
+                <a href="mailto:genoviatechnologies@gmail.com?subject=Fridge Browser Support">
+                    genoviatechnologies@gmail.com
+                </a>
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+let version = "1.0";
+document.getElementById("version").innerText = "Version " + version;
+
+function downloaded() {
+    document.getElementById("downloadStatus").innerText = "Downloading...";
+}
+</script>
+
+</body>
+</html>
