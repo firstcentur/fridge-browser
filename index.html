@@ -37,6 +37,16 @@ body {
     border-bottom: 2px solid black;
 }
 
+/* NEW NOTICE */
+.driveNotice {
+    background: #d9f0ff;
+    color: black;
+    padding: 8px;
+    text-align: center;
+    border-bottom: 2px solid black;
+    font-weight: bold;
+}
+
 /* Content */
 .content {
     padding: 20px;
@@ -97,6 +107,11 @@ a {
         ⚠ This software is ONLY available for Windows
     </div>
 
+    <!-- GOOGLE DRIVE NOTICE -->
+    <div class="driveNotice">
+        📦 Download is hosted on Google Drive due to GitHub file size limits
+    </div>
+
     <div class="content">
 
         <!-- TERMINAL -->
@@ -110,7 +125,7 @@ a {
         <p>Fast • Lightweight • Custom</p>
 
         <!-- DOWNLOAD -->
-        <a href="files/fridge-browser-v1.0.zip" download>
+        <a href="https://drive.google.com/drive/folders/1OTRo3p-gYerZSKdGLFEAODDS5NjVc2Lr?usp=sharing" target="_blank">
           <button id="downloadBtn" onclick="downloaded()">Download</button>
         </a>
 
@@ -179,7 +194,7 @@ let version = "1.0";
 document.getElementById("version").innerText = "Version " + version;
 
 function downloaded() {
-    document.getElementById("downloadStatus").innerText = "Downloading...";
+    document.getElementById("downloadStatus").innerText = "Opening download...";
 }
 </script>
 
